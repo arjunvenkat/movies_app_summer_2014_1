@@ -1,0 +1,29 @@
+<h1>Directors</h1>
+
+<p><a href="/new_director">Add a New Director</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dob</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @directors.each do |director| %>
+    <tr>
+          <td><%= director.name %></td>
+          <td><%= director.dob %></td>
+          <td><a href="/directors/<%= director.id %>">Show</a>
+        </td>
+      <td><a href="/directors/<%= director.id %>/edit">Edit</a></td>
+      <td><a href="/directors/<%= director.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,17 @@
+<h1>Role #<%= @role.id %></h1>
+
+<div>
+  <strong>Actor</strong>:<br />
+  <p><%= @role.actor.name %></p>
+</div>
+<div>
+  <strong>Movie</strong>:<br />
+  <p><%= @role.movie.title %></p>
+</div>
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @role.name %></p>
+</div>
+
+<a href="/roles/<%= @role.id %>/edit">Edit</a> |
+<a href="/roles/<%= @role.id %>/destroy">Destroy</a>

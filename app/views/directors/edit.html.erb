@@ -1,0 +1,17 @@
+<h1>Editing Director #<%= @director.id %></h1>
+
+<form action="/directors/<%= @director.id %>/update">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @director.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="dob">dob</label><br />
+    <input id="dob" name="dob" value="<%= @director.dob  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

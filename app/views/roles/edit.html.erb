@@ -1,0 +1,21 @@
+<h1>Editing Role #<%= @role.id %></h1>
+
+<form action="/roles/<%= @role.id %>/update">
+  <div>
+    <label for="actor_id">actor_id</label><br />
+    <input id="actor_id" name="actor_id" value="<%= @role.actor_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="movie_id">movie_id</label><br />
+    <input id="movie_id" name="movie_id" value="<%= @role.movie_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @role.name  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

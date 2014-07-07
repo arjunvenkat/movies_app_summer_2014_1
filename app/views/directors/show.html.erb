@@ -1,0 +1,23 @@
+<h1>Director #<%= @director.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @director.name %></p>
+</div>
+<div>
+  <strong>Dob</strong>:<br />
+  <p><%= @director.dob %></p>
+</div>
+
+<div>
+  <strong>Movies</strong>:<br />
+  <ul>
+    <% @director.movies.each do |movie| %>
+    <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<a href="/directors/<%= @director.id %>/edit">Edit</a> |
+<a href="/directors/<%= @director.id %>/destroy">Destroy</a>
